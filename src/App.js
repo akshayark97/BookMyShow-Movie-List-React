@@ -4,6 +4,7 @@ import Header from "./component/Header/Header";
 import { fetchMovieData } from "./api/api";
 import "./App.css";
 import Trailer from "./component/Trailer/Trailer";
+import Filter from "./component/Filter/Filter";
 
 const App = () => {
   const [trailerUrl, setTrailerUrl] = useState(null);
@@ -42,6 +43,7 @@ const App = () => {
   return (
     <div className="container">
       <Header />
+      <Filter />
       <div ref={trailerRef} className="movie-list">
         {trailerUrl && (
           <Trailer trailerUrl={trailerUrl} clickedMovie={clickedMovie} />

@@ -1,0 +1,26 @@
+.filter-container {
+  display: flex;
+  gap: 30px;
+}
+
+.filter-title {
+  color: grey;
+  margin-left: 10px;
+}
+
+.lang-container {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.lang-filter {
+  border-radius: 10px;
+  width: 50px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(196, 188, 188);
+  background-color: rgb(95, 91, 91);
+}
