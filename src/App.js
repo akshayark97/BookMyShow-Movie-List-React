@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import MovieList from "./component/MovieList/MovieList";
-
+import Header from "./component/Header/Header";
 import { fetchMovieData } from "./api/api";
 import "./App.css";
 import Trailer from "./component/Trailer/Trailer";
@@ -41,6 +41,7 @@ const App = () => {
 
   return (
     <div className="container">
+      <Header />
       <div ref={trailerRef} className="movie-list">
         {trailerUrl && (
           <Trailer trailerUrl={trailerUrl} clickedMovie={clickedMovie} />
