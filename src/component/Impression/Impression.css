@@ -1,0 +1,29 @@
+.impression-container {
+  display: flex;
+  gap: 20px;
+  line-height: 20px;
+  margin-bottom: "10px";
+}
+
+.ratings {
+  display: flex;
+  gap: 10px;
+}
+
+.wtcPer {
+  color: white;
+}
+
+.wtsCount {
+  color: grey;
+}
+
+.date-container {
+  display: flex;
+  gap: 10px;
+}
+
+.date-text {
+  width: 10px;
+  color: white;
+}

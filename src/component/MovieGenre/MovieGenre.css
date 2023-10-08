@@ -1,0 +1,15 @@
+.genre-container {
+  display: flex;
+  gap: 10px;
+  line-height: 5px;
+}
+
+.genre {
+  border: 1px solid grey;
+  height: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+}

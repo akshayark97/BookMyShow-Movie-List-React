@@ -1,0 +1,50 @@
+.black-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.event-title {
+  line-height: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+  color: white;
+}
+
+.event-lang {
+  line-height: 5px;
+  color: grey;
+}
+
+.event-description {
+  line-height: 25px;
+  color: grey;
+}
+
+.readmore {
+  text-decoration: none;
+  color: green;
+}
+
+.info-dummy-box {
+  display: flex;
+  justify-content: space-between;
+  line-height: 4px;
+  align-items: center;
+  gap: 30px;
+  white-space: nowrap;
+}
+
+.will-poll-color {
+  color: green;
+}
+
+.maybe-poll-color {
+  color: gold;
+}
+
+.dont-poll-color {
+  color: red;
+}
