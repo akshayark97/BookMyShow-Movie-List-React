@@ -1,10 +1,50 @@
-import "./styles.css";
+import React, { useState, useEffect, useRef } from "react";
+import MovieList from "./component/MovieList/MovieList";
 
-export default function App() {
+import { fetchMovieData } from "./api/api";
+import "./App.css";
+
+const App = () => {
+  const [trailerUrl, setTrailerUrl] = useState(null);
+  const [movies, setMovies] = useState([]);
+  const [clickedMovie, setClickedMovie] = useState({});
+
+  const trailerRef = useRef(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // fetching movie data from api
+        const movieData = await fetchMovieData();
+        setMovies(Object.values(movieData));
+      } catch (error) {
+        console.error("Error fetching movie data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Event triggered when clicking any of the movie card
+  const handleWatchTrailer = (url, movie) => {
+    setTrailerUrl(url);
+    setClickedMovie(movie);
+
+    // Scroll to the top of the MovieList to show the trailer
+    const movieListContainer = document.querySelector(".movie-list");
+    // movieListContainer.scrollTop = 0; // Scroll to the top
+
+    // using smooth scrolling
+    movieListContainer.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!!</h2>
+    <div className="container">
+      <div ref={trailerRef} className="movie-list">
+        <MovieList movies={movies} onWatchTrailer={handleWatchTrailer} />
+      </div>
     </div>
   );
-}
+};
+
+export default App;
