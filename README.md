@@ -2,6 +2,8 @@
 
 BookMyShow web app with list of movies and render trailer when on click of movie list item.
 
+https://book-my-show-movie-list-react.vercel.app/
+
 ## Table of Contents
 
 - [Installation](#installation)
